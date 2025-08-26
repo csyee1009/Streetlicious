@@ -1,0 +1,125 @@
+/* ===================== Ingredient Page Styles ===================== */
+main {
+    padding: 40px 20px;
+    min-height: 80vh;
+    text-align: center;
+    background-color: #fff9e3; /* Soft cream background */
+}
+
+main h1 {
+    color:#d86c4f; /* Green highlight */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+
+main p {
+    font-size: 1.1rem;
+    color: #3b2a15; /* deep brownish text */
+    max-width: 700px; /* limits line width for readability */
+    margin: 0 auto 30px auto; /* centers paragraph and adds spacing below */
+    line-height: 1.6; /* makes text more readable */
+    text-align: center; /* center-align text */
+    padding: 0 15px; /* optional horizontal padding for mobile */
+}
+#ingredientInput {
+    padding: 10px;
+    width: 250px;
+    max-width: 90%;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#ingredientInput:focus {
+    border-color: #e5ae21;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #e49557; /* muted orange */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#searchBtn:hover {
+    background-color: #d86c4f; /* darker muted orange */
+}
+
+#results {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Meal Card Styling */
+.meal {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff1d6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.meal img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.meal h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3b2a15;
+    margin-bottom: 10px;
+}
+
+.meal a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #e5ae21;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.meal a:hover {
+    background-color: #e5ae21;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    #ingredientInput, #searchBtn {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    .meal {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .meal {
+        width: 90%;
+    }
+}

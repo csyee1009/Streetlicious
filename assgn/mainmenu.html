@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/img/logo/streetliciouslogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="padding-bottom:0;">
+
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top my-navbar">
+            <div class="logo">
+                <a class="navbar-brand">
+                    <img src="assets/img/logo/streetliciouslogo.png" alt="Streetlicious Logo">
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link" href="mainmenu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html">Navigation Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filter.html">Food Filter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review.html">Food Review</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ingredient.html">Ingredient Menu</a></li>
+                    <li class="nav-item"><a class="nav-link logout-btn" href="index.html" id="logout-btn">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-menu-page">
+
+        <!-- Main Menu Content -->
+        <section class="mainmenu-container">
+            <h1>Welcome to Streetlicious, 
+                <span style="color:Black;" id="username"></span>
+                !
+            </h1>
+
+            <p>Select an option to get started:</p>
+
+            <!-- Main Content Section with Two Boxes -->
+            <div class="menu-boxes">
+                <div class="menu-box local-food">
+                    <a href="localfood.html">
+                        <h3>Local Food</h3>
+                        <p>Explore local delicacies from your area.</p>
+                    </a>
+                </div>
+
+                <div class="menu-box global-food">
+                    <a href="globalfood.html">
+                        <h3>Global Food</h3>
+                        <p>Discover popular cuisines from around the world.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer small text-center text-white-50">
+        <nav class="my-footer">
+            <div class="social d-flex justify-content-center align-items-center">
+                <a class="mx-0" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-pinterest"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-github"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <p>&copy; Streetlicious 2025 | All Rights Reserved</p>
+            </div>
+        </nav>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve the username from the cookies
+    const username = getCookie("storedUsername");
+
+    // If the username exists in cookies, display it in the span with id="username"
+    if (username) {
+        document.getElementById("username").textContent = username;
+    }
+});
+
+// Function to get cookies by name
+function getCookie(name) {
+    let cookieArr = document.cookie.split(";");
+
+    // Loop through all cookies to find the one matching the name
+    for (let i = 0; i < cookieArr.length; i++) {
+        let cookie = cookieArr[i].trim();
+
+        // If the cookie starts with the name, return the value
+        if (cookie.startsWith(name + "=")) {
+            return cookie.substring(name.length + 1);
+        }
+    }
+    return null; // Return null if no cookie found with the name
+}
+    </script>
+
+    <script src="sessionscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

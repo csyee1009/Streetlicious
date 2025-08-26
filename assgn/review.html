@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Review</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles(1).css">
+  <link rel="icon" href="assets/img/logo/streetliciouslogo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="padding-bottom:0;">
+
+      <header>
+        <nav class="navbar navbar-expand-md fixed-top my-navbar">
+            <div class="logo">
+                <a class="navbar-brand">
+                    <img src="assets/img/logo/streetliciouslogo.png" alt="Streetlicious Logo">
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link" href="mainmenu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html">Navigation Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filter.html">Food Filter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review.html">Food Review</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ingredient.html">Ingredient Menu</a></li>
+                    <li class="nav-item"><a class="nav-link logout-btn" href="index.html" id="logout-btn">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+  
+  <!-- Container for both Local & Global -->
+  <section class="review-container">
+
+    <!-- Local Food -->
+    <div class="areatitle">
+      <h2>Customer Reviews - Local Food</h2>
+    
+    <div id="localFoodContainer" class="review-box">
+      
+
+      <div class="review" data-food="Hokkien Mee">
+        <h3>Hokkien Mee</h3>
+        <img src="assets/img/localfood/Hokkien_Mee.jpg" alt="Hokkien Mee" class="food-img">
+        <p class="copyright">
+          “Hokkien Mee Penang” by <a href="https://www.flickr.com/people/19160878@N08">brown_colour</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Penang_Har_Mee_Sold_in_Parit_Buntar.jpg">
+            View image</a>
+          . Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Rich, dark soy sauce flavor with the perfect balance of prawns and pork.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Ikan Bakar">
+        <h3>Ikan Bakar</h3>
+        <img src="assets/img/localfood/Ikan_Bakar.jpg" alt="Ikan Bakar" class="food-img">
+        <p class="copyright">
+          “Ikan Bakar” by <a href="https://commons.wikimedia.org/wiki/User:S_Kartika">S Kartika</a>, licensed
+          under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Ikan_Bakar_1.jpg">View image</a>. Changes made:
+          Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Freshly grilled fish with spicy sambal that enhances every bite.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Dodol">
+        <h3>Dodol</h3>
+        <img src="assets/img/localfood/Dodol.JPG" alt="Dodol" class="food-img">
+        <p class="copyright">
+          “Dodol” by <a href="https://commons.wikimedia.org/wiki/User:Midori">Midori</a>, licensed under
+          <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Jenang_asli_Kudus.JPG">View image</a>. Changes
+          made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Chewy, sweet, and fragrant - a nostalgic traditional treat.”</p>
+          <p class="stars">★★★☆☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Hainanese Chicken Rice">
+        <h3>Hainanese Chicken Rice</h3>
+        <img src="assets/img/localfood/Hainanese_Chicken_Rice.jpg" alt="Hainanese Chicken Rice" class="food-img">
+        <p class="copyright">
+          “Hainanese Chicken Rice” by <a href="https://commons.wikimedia.org/wiki/User_talk:I64s">Terence</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by/2.5/deed.en">CC BY 2.5</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Hainanese_Chicken_Rice.jpg">View Image</a>. Changes
+          made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Tender chicken and aromatic rice with the perfect chili sauce.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Nasi Kerabu">
+        <h3>Nasi Kerabu</h3>
+        <img src="assets/img/localfood/Nasi_kerabu.jpg" alt="Nasi Kerabu" class="food-img">
+        <p class="copyright">
+          “Nasi Kerabu” by <a
+            href="https://commons.wikimedia.org/w/index.php?title=User:Brownc&action=edit&redlink=1">Brownc</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Nasi_kerabu_from_serai,_paradigm_mall.jpg">View
+            image</a>. Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Colorful, herbal, and full of flavors - a Kelantanese classic.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Pulut Panggang">
+        <h3>Pulut Panggang</h3>
+        <img src="assets/img/localfood/Pulut_Panggang.jpg" alt="Pulut Panggang" class="food-img">
+        <p class="copyright">
+          “Pulut Panggang” by <a
+            href="https://commons.wikimedia.org/w/index.php?title=User:Mdsheth1986&action=edit&redlink=1">Mdsheth1986</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY 4.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Pulut_Panggang.jpg">View image</a>. Changes made:
+          Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Smoky grilled glutinous rice with spicy coconut filling - addictive!”</p>
+          <p class="stars">★★★☆☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Nasi Kebuli">
+        <h3>Nasi Kebuli</h3>
+        <img src="assets/img/localfood/Nasi_Kebuli.JPG" alt="Nasi Kebuli" class="food-img">
+        <p class="copyright">
+          “Nasi Kebuli” by <a href="https://commons.wikimedia.org/wiki/User:Gunkarta">Gunawan
+            Kartapranata</a>, licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Nasi_Kebuli_Jakarta.JPG">View image</a>. Changes
+          made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Aromatic rice dish with rich spices and tender meat, very satisfying.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Nasi Ambeng">
+        <h3>Nasi Ambeng</h3>
+        <img src="assets/img/localfood/Nasi_ambeng.jpg" alt="Nasi Ambeng" class="food-img">
+        <p class="copyright">
+          “Nasi Ambeng” by <a href="https://commons.wikimedia.org/wiki/User:Misaochan2">Misaochan2</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Nasi_ambeng_3.jpg">View image</a>. Changes made:
+          Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Perfect for sharing, generous portions with bold traditional flavors.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Kuih Apam Johol">
+        <h3>Kuih Apam Johol</h3>
+        <img src="assets/img/localfood/Apam_Johol.jpg" alt="Kuih Apam Johol" class="food-img">
+        <p class="copyright">
+          “Apam Johol” by <a
+            href="https://commons.wikimedia.org/w/index.php?title=User:DEKDA_SAMSUDIN&action=edit&redlink=1">DEKDA
+            SAMSUDIN</a>, licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:APAM_JOHOL.jpg">View Image</a>. Changes made:
+          Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Soft, slightly sweet, and wrapped in banana leaves - simple yet delightful.”</p>
+          <p class="stars">★★★☆☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Popiah Basah">
+        <h3>Popiah Basah</h3>
+        <img src="assets/img/localfood/Popiah.jpg" alt="Popiah Basah" class="food-img">
+        <p class="copyright">
+          “Popiah Basah” by <a
+            href="https://commons.wikimedia.org/w/index.php?title=User:ProjectManhattan&action=edit&redlink=1">ProjectManhattan</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Popiah_2.jpg">View image</a>. Changes made: Resized
+          and Cropped
+        </p>
+        <div class="comments">
+          <p>“Fresh spring rolls filled with crunchy vegetables and savory sauce.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Mee Bandung Muar">
+        <h3>Mee Bandung Muar</h3>
+        <img src="assets/img/localfood/Mee_Bandung_Muar.jpg" alt="Mee Bandung Muar" class="food-img">
+        <p class="copyright">
+          “Mee Bandung Muar” by Sham Hardy</a>, licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">CC BY 2.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Mee_Bandung_Muar.jpg">View image</a>. Changes made:
+          Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Thick gravy with a rich seafood taste, truly comforting.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Kuih Penjaram">
+        <h3>Kuih Penjaram</h3>
+        <img src="assets/img/localfood/Kuih_penjaram.jpg" alt="Kuih Penjaram" class="food-img">
+        <p class="copyright">
+          “Kuih Penjaram” by <a href="https://commons.wikimedia.org/wiki/User:Muffin_Wizard">Ranking Update</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 Unported </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Kuih_pinjaram_(Penyaram).jpg">View image</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Crispy edges with a soft and fluffy center - a Sarawak specialty.”</p>
+          <p class="stars">★★★☆☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Hinava">
+        <h3>Hinava</h3>
+        <img src="assets/img/localfood/Hinava.jpg" alt="Hinava" class="food-img">
+        <p class="copyright">
+          “Hinava” by <a
+            href="https://commons.wikimedia.org/w/index.php?title=User:Terencetulus&action=edit&redlink=1">Terencetulus</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Hinava_Sabah.jpg">View image</a>. Changes made:
+          Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Refreshing and tangy, with raw fish cured in lime and chili.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Kolo Mee">
+        <h3>Kolo Mee</h3>
+        <img src="assets/img/localfood/Kolo_Mee.jpg" alt="Kolo Mee" class="food-img">
+        <p class="copyright">
+          “Kolo Mee” by <a href="https://commons.wikimedia.org/wiki/User:Meandkancil2020">Meandkancil2020</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Kolo_Mee_khas_Sarawak,_Malaysia.jpg">View
+            Image</a>. Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Springy noodles tossed with light sauce, simple yet delicious.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Kompia">
+        <h3>Kompia</h3>
+        <img src="assets/img/localfood/Kompia.jpg" alt="Kompia" class="food-img">
+        <p class="copyright">
+          “Kompia” by <a
+            href="https://commons.wikimedia.org/w/index.php?title=User:AasonTing&action=edit&redlink=1">AasonTing</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Sibu_Kompia.jpg">View image</a>. Changes made:
+          Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Crispy on the outside, soft inside - perfect when filled with meat.”</p>
+          <p class="stars">★★★☆☆</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+    <div class="areatitle">
+    <h2>Customer Reviews - Global Food</h2>
+    <!-- Global Food -->
+    <div id="globalFoodContainer" class="review-box">
+      
+
+      <div class="review" data-food="Martabak">
+        <h3>Martabak</h3>
+        <img src="assets/img/globalfood/Martabak.jpg" alt="Martabak" class="food-img">
+        <p class="copyright">
+          "Martabak" by <a href="https://commons.wikimedia.org/wiki/User:Mojackjutaily"
+            target="_blank">Mojackjutaily</a>,
+          licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Martabak.jpg" target="_blank">View Image</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Rich, fluffy pancake filled with chocolate and nuts, a true indulgence.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Pad Thai">
+        <h3>Pad Thai</h3>
+        <img src="assets/img/globalfood/Pad_Thai.jpg" alt="Pad Thai" class="food-img">
+        <p class="copyright">
+          "Pad Thai" by <a href="https://commons.wikimedia.org/wiki/User:Takeaway">Takeaway</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Phat_Thai_kung_Chang_Khien_street_stall.jpg">
+            Image page</a>. Changes made: Resized and Cropped
+        <div class="comments">
+          <p>“Sweet, tangy, and a little nutty—perfectly balanced noodles.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Takoyaki">
+        <h3>Takoyaki</h3>
+        <img src="assets/img/globalfood/Takoyaki.jpg" alt="Takoyaki" class="food-img">
+        <p class="copyright">
+          "Takoyaki" by <a href="https://commons.wikimedia.org/wiki/User:TaronjaSatsuma">Francesc Fort</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Takoyaki_-_Tora.jpg">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Soft, savory balls with octopus, drizzled with sauce and bonito flakes—so good!”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Pizza">
+        <h3>Pizza</h3>
+        <img src="assets/img/globalfood/Pizza.jpg" alt="Pizza" class="food-img">
+        <p class="copyright">
+          "Pizza" by <a href="https://www.flickr.com/people/91873384@N04">Dale Cruse</a>, licensed under
+          <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Pizza_(33154465968).jpg">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Cheesy, crispy, and loaded with toppings—everyone's favorite classic.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Belgian Waffle">
+        <h3>Belgian Waffle</h3>
+        <img src="assets/img/globalfood/Belgian_Waffle.jpg" alt="Belgian Waffle" class="food-img">
+        <p class="copyright">
+          "Belgian Waffle" by <a href="https://www.flickr.com/people/92269745@N00">Ralph Daily</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Waffle_with_strawberries_and_confectioner%27s_sugar.jpg">
+            Image page</a>. Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Light, fluffy, and perfectly golden with just the right crunch.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Fish and Chips">
+        <h3>Fish and Chips</h3>
+        <img src="assets/img/globalfood/Fish_and_Chips.jpg" alt="Fish and Chips" class="food-img">
+        <p class="copyright">
+          "Fish and Chips" by <a href="https://en.wikipedia.org/wiki/User:Solipsist">Andrew Dunn</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">CC BY-SA 2.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Fish_and_chips.jpg">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Golden fried fish with fluffy fries, classic comfort done right.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Gyros">
+        <h3>Gyros</h3>
+        <img src="assets/img/globalfood/Gyros.jpg" alt="Gyros" class="food-img">
+        <p class="copyright">
+          "Gyros" by <a href="https://commons.wikimedia.org/wiki/User:Fajardoalacant">Antonio Fajardo i
+            López</a>, licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Pita_giros.JPG">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Juicy meat with tangy tzatziki wrapped in soft pita—delicious!”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Hot Dog">
+        <h3>Hot Dog</h3>
+        <img src="assets/img/globalfood/Hot_Dog.jpg" alt="Hot Dog" class="food-img">
+        <p class="copyright">
+          "Hot Dog" by <a href="https://flickr.com/photos/stevendepolo/">stevendepolo</a>, licensed under
+          <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 </a>.
+          <a
+            href="https://commons.wikimedia.org/wiki/File:Chili_Dog_Crazy_Charlie%27s_Hotdogs_Food_Macros_May_07,_20111.jpg">
+            Image page</a>. Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Simple yet tasty, loaded with sauces and toppings that hit the spot.”</p>
+          <p class="stars">★★★☆☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Taco">
+        <h3>Taco</h3>
+        <img src="assets/img/globalfood/Taco.jpg" alt="Taco" class="food-img">
+        <p class="copyright">
+          "Taco" by <a href="https://www.flickr.com/photos/picsoflife/">Ari Helminen</a>, licensed under
+          <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 Unported </a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Tacos_al_Pastor_2.jpg">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Crispy shell, fresh toppings, and bold seasoning—every bite is exciting.”</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Arepa">
+        <h3>Arepa</h3>
+        <img src="assets/img/globalfood/Arepa.jpg" alt="Arepa" class="food-img">
+        <p class="copyright">
+          Arepa by <a
+            href="https://commons.wikimedia.org/w/index.php?title=User:Wilrachel&action=edit&redlink=1">Wilmeris
+            Hernández</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Arepa_Tradicional.jpg">View Image</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Crispy outside yet fluffy inside, and the fillings are so satisfying!”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Coxinha">
+        <h3>Coxinha</h3>
+        <img src="assets/img/globalfood/Coxinha.jpg" alt="Coxinha" class="food-img">
+        <p class="copyright">
+          “Coxinha” by <a href="https://www.flickr.com/people/36102864@N05">Romerito Pontes</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0</a>.
+          <a
+            href="https://commons.wikimedia.org/wiki/File:(2014-11-22)_La_Donosti_-_Agudos_-_Coxinha_de_Leitoa_Romerito_Pontes_(15870107515).jpg">
+            View Image</a>. Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Crunchy coating with creamy chicken filling—addictive little snacks!”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Falafel">
+        <h3>Falafel</h3>
+        <img src="assets/img/globalfood/Falafel.jpg" alt="Falafel" class="food-img">
+        <p class="copyright">
+          “Falafel” by <a href="https://commons.wikimedia.org/wiki/User:Popo_le_Chien">Popo le Chien</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:Falafels_2.jpg">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Crispy on the outside, soft and herby inside, packed with flavor.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Suya">
+        <h3>Suya</h3>
+        <img src="assets/img/globalfood/Suya.jpg" alt="Suya" class="food-img">
+        <p class="copyright">
+          "Suya" by <a href="https://commons.wikimedia.org/wiki/User:WhisperToMe">WhisperToMe</a>,
+          licensed under
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC ZERO 1.0</a>.
+          <a href="https://commons.wikimedia.org/wiki/File:SuyavarietiesTX.JPG">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Spicy, smoky skewers packed with flavor and heat—amazing street food.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Lamington">
+        <h3>Lamington</h3>
+        <img src="assets/img/globalfood/Lamington.jpg" alt="Lamington" class="food-img">
+        <p class="copyright">
+          “Lamington" by <a href="https://www.flickr.com/photos/stone-soup/33930070370/">jules</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 </a>
+          <a href="https://commons.wikimedia.org/wiki/File:Lamingtons.jpg">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Moist sponge with chocolate and coconut—sweet but not overwhelming.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <div class="review" data-food="Meat Pie">
+        <h3>Meat Pie</h3>
+        <img src="assets/img/globalfood/Meat_Pie.jpg" alt="Meat Pie" class="food-img">
+        <p class="copyright">
+          “Meat Pie” by <a href="http://georgianrecipes.net/author/georgianrecipes/">Georgian Recipes</a>,
+          licensed under
+          <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0 </a>
+          <a href="https://commons.wikimedia.org/wiki/File:Fydzhin_cut.jpg">Image page</a>.
+          Changes made: Resized and Cropped
+        </p>
+        <div class="comments">
+          <p>“Flaky crust with savory filling—warm and comforting.”</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </section>
+
+  <!-- Review submission form -->
+  <div class="review-form">
+    <h2>Leave a Review</h2>
+    <form id="reviewForm">
+      <label for="food">Food Name:</label>
+      <select id="food" name="food" required>
+        <option value="" disabled selected>Select a food</option>
+      </select>
+
+      <label for="comment">Your Comment:</label>
+      <textarea id="comment" name="comment" placeholder="Write your review..." required></textarea>
+
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating" required>
+        <option value="5">★★★★★ (5)</option>
+        <option value="4">★★★★☆ (4)</option>
+        <option value="3">★★★☆☆ (3)</option>
+        <option value="2">★★☆☆☆ (2)</option>
+        <option value="1">★☆☆☆☆ (1)</option>
+      </select>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer small text-center text-white-50">
+    <nav class="my-footer">
+      <div class="social d-flex justify-content-center align-items-center">
+        <a class="mx-0" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-pinterest"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-github"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-telegram"></i></a>
+      </div>
+      <div class="container px-4 px-lg-5">
+        <p>&copy; Streetlicious 2025 | All Rights Reserved</p>
+      </div>
+    </nav>
+  </footer>
+
+  <script>
+    // Global arrays to store local and global food names
+    let localFoods = [];
+    let globalFoods = [];
+
+    // Function to fetch food names from a given HTML page and extract food names
+    function fetchFoodNames(pageUrl) {
+      return fetch(pageUrl)
+        .then(response => response.text())
+        .then(data => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(data, "text/html");
+
+          // Extract food names from all p.food-name elements
+          const foodElements = doc.querySelectorAll('p.food-name');
+          return Array.from(foodElements).map(food => food.textContent);
+        })
+        .catch(error => {
+          console.error('Error fetching or parsing the food page:', error);
+          return [];
+        });
+    }
+
+    // Function to populate the dropdown with the fetched food names
+    function populateFoodDropdown() {
+      const foodSelect = document.getElementById("food");
+
+      // Fetch and populate local foods
+      fetchFoodNames('localfood.html')
+        .then(foods => {
+          localFoods = foods; // Store local food names in global variable
+          foods.forEach(food => {
+            const option = document.createElement("option");
+            option.value = food;
+            option.textContent = food;
+            foodSelect.appendChild(option);
+          });
+        });
+
+      // Fetch and populate global foods
+      fetchFoodNames('globalfood.html')
+        .then(foods => {
+          globalFoods = foods; // Store global food names in global variable
+          foods.forEach(food => {
+            const option = document.createElement("option");
+            option.value = food;
+            option.textContent = food;
+            foodSelect.appendChild(option);
+          });
+        });
+    }
+
+    // Function to handle form submission and display the review in the correct food box
+    document.getElementById("reviewForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const food = document.getElementById("food").value.trim();
+      const comment = document.getElementById("comment").value;
+      const rating = document.getElementById("rating").value;
+
+      // Convert rating to stars
+      const stars = "★★★★★".slice(0, rating) + "☆☆☆☆☆".slice(0, 5 - rating);
+
+      // Create the review element
+      const newReview = document.createElement("div");
+      newReview.classList.add("review");
+      newReview.setAttribute("data-food", food);
+
+      // Set the review HTML structure
+      newReview.innerHTML = `
+    <h3>${food}</h3>
+    <img src="assets/img/${localFoods.includes(food) ? 'localfood' : 'globalfood'}/${food.replace(/\s+/g, '_')}.jpg" alt="${food}" class="food-img">
+    <p class="copyright">
+        “${food}” by <a href="#">Unknown</a>,
+        licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>.
+        <a href="https://commons.wikimedia.org/wiki/File:${food.replace(/\s+/g, '_')}.jpg">View Image</a>.
+        Changes made: Resized and Cropped
+    </p>
+    <div class="comments">
+        <p>“${comment}”</p>
+        <p class="stars">${stars}</p>
+    </div>
+  `;
+
+      // Find the correct food section to add the review to
+      if (localFoods.includes(food)) {
+        document.getElementById("localFoodContainer").prepend(newReview);
+      } else if (globalFoods.includes(food)) {
+        document.getElementById("globalFoodContainer").prepend(newReview);
+      }
+
+      // Reset the form
+      document.getElementById("reviewForm").reset();
+
+      alert("Review submitted successfully!");
+    });
+
+    
+
+    // Call the function to populate the dropdown when the page loads
+    window.onload = function () {
+      populateFoodDropdown();
+    };
+
+
+  </script>
+
+  <script src="sessionscript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

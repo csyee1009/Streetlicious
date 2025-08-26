@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/img/logo/streetliciouslogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+</head>
+
+
+<body>
+
+    <!-- ================= Cookie Consent ================= -->
+    <div class="modal fade" id="cookieNotice" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"
+        data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">🍪 We Value Your Privacy</h5>
+                </div>
+                <div class="modal-body d-flex">
+                    <div class="me-3 d-flex align-items-center">
+                        <i class="fa-solid fa-cookie-bite fa-3x text-warning"></i>
+                    </div>
+                    <div>
+                        <p class="mb-2">
+                            Our website uses cookies to ensure you have the best experience.
+                            <a href="https://www.cloudflare.com/learning/privacy/what-are-cookies/" target="_blank"
+                                class="text-decoration-underline">
+                                Learn more
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button class="btn btn-outline-dark btn-sm"
+                        onclick="window.open('https://www.cloudflare.com/learning/privacy/what-are-cookies/', '_blank')">
+                        More Info
+                    </button>
+                    <button class="btn btn-warning btn-sm text-dark" id="btnAcceptCookies">
+                        Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar fixed-top my-navbar">
+            <div class="logo">
+                <a class="navbar-brand">
+                    <img src="assets/img/logo/streetliciouslogo.png" alt="Streetlicious Logo">
+                </a>
+            </div>
+            <div>
+                <ul class="navbar-nav ms-auto nav-links ">
+                    <li class="nav-item"><a class="nav-link menu-btn" href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Background with Falling Donuts -->
+        <div class="falling-donuts"></div>
+
+        <script>
+            // JavaScript to generate falling donuts
+            const numDonuts = 50; // Number of falling donuts
+
+            // Create donuts dynamically
+            const donutContainer = document.querySelector('.falling-donuts');
+            for (let i = 0; i < numDonuts; i++) {
+                let donut = document.createElement('div');
+                donut.style.width = `${Math.random() * 50 + 20}px`; // Random size for each donut
+                donut.style.height = donut.style.width;
+                donut.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random duration
+                donut.style.left = `${Math.random() * 100}%`; // Random horizontal position
+                donut.style.animationDelay = `${Math.random() * 5}s`; // Random delay before starting
+                donutContainer.appendChild(donut);
+            }
+
+        </script>
+
+        <div class="auth-container" id="auth-container">
+            <div class="auth-card">
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form active">
+                    <h2>Login</h2>
+                    <input type="text" id="login-username" placeholder="Username" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <label><input type="checkbox" id="remember-me"> Remember Me</label>
+                    <button type="submit" class="btn-primary">Login</button>
+                    <p class="switch-text">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form id="signup-form" class="auth-form">
+                    <h2>Sign Up</h2>
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button type="submit" class="btn-primary">Sign Up</button>
+                    <p class="switch-text">Already have an account? <a href="#" id="show-login">Login</a></p>
+                </form>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer small text-center text-white-50">
+        <nav class="fixed-bottom my-footer">
+            <div class="social d-flex justify-content-center align-items-center">
+                <a class="mx-0" href="https://www.instagram.com/streetlicious._?igsh=d3ptYXpvaWFhdzF2&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                <a class="mx-0" href="https://x.com/Streetlicious_"><i class="fab fa-twitter"></i></a>
+                <a class="mx-0" href="https://www.facebook.com/share/1CEMgaDhgi/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-0" href="https://pin.it/7GYmZ0BQ9"><i class="fab fa-pinterest"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-github"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <p>&copy; Streetlicious 2025 | All Rights Reserved</p>
+            </div>
+
+        </nav>
+
+    </footer>
+
+
+    <!-- External JavaScript file -->
+    <script src="loginscript.js"></script>
+    <script>
+        // Cookie consent logic
+        document.addEventListener("DOMContentLoaded", () => {
+            const cookiePopup = new bootstrap.Modal(document.getElementById("cookieNotice"));
+
+            if (!localStorage.getItem("cookiesAccepted")) {
+                cookiePopup.show();
+            }
+
+            document.getElementById("btnAcceptCookies").addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "yes");
+                cookiePopup.hide();
+            });
+        });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1060 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===================== Reset Default Styles ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff9e3;
+    /* soft cream background */
+    color: #3b2a15;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+}
+
+
+main {
+    background-color: #fff9e3;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    color: #e49557;
+    /* muted red-orange */
+    margin-bottom: 1.5rem;
+}
+
+
+body {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+
+
+
+
+/* ===================== Navigation Bar Styles ===================== */
+
+.my-navbar {
+    background-color: rgba(255, 208, 121, 0.85);
+    box-shadow: none;
+    width: 100%;
+    /* Ensure full width */
+    position: fixed;
+    /* Fix navbar to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+
+}
+
+/* Logo text */
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    /* muted red-orange */
+    margin-left: left;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+}
+
+
+/* Dropdown Button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* For mobile screens (max-width 767px) */
+@media (max-width: 767px) {
+    .navbar-toggler {
+        margin-right: 20px;
+    }
+
+    .navbar-collapse {
+        width: 250px;
+        /* Set the width to a smaller value (you can adjust it) */
+        position: fixed;
+        top: 70px;
+        right: 0;
+        background-color: rgba(255, 208, 121, 0.85);
+        /* Optional: Add background color */
+        z-index: 1;
+        /* Ensure it's above other elements */
+        transition: right 0.3s ease-in-out;
+        /* Smooth transition */
+        border-radius: 8px;
+    }
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    color: white;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #5c4b3f;
+    /* deep brownish gray */
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #ffffff;
+    /* soft gold highlight */
+}
+
+.menu-btn,
+.logout-btn,
+.login-btn {
+    margin-right: 20px;
+    background: #ff9f55 !important;
+    /* soft orange */
+    color: white !important;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-btn:hover,
+.logout-btn:hover,
+.login-btn:hover {
+    background: #d86c4f !important;
+    /* muted red-orange */
+    color: white !important;
+}
+
+
+
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, transparent, black);
+    z-index: 1;
+    /* Ensures the gradient overlay stays above the video */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the video covers the area without distortion */
+    z-index: 0;
+    /* Ensure the video stays behind the content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Ensure the text stays above the video */
+    text-align: center;
+    color: white;
+    margin-top: 450px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #e49557;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #ffd079;
+}
+
+
+
+
+
+.about {
+    padding-top: 5rem;
+    background-color: black;
+    color: white;
+    padding-bottom: 200px;
+}
+
+/* Title Styling */
+.about h2 {
+    color: #f4a261;
+    /* Soft muted orange */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* Paragraph Styling */
+.about p {
+    color: #fff1d6;
+    /* Muted cream color for text */
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Flex container for left and right boxes */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Ensure responsiveness */
+}
+
+/* Style for both left and right boxes */
+.box {
+    background-color: #34495e;
+    /* Darker grayish blue background */
+    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners */
+    width: 48%;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth animation on hover */
+}
+
+/* Hover effect for boxes */
+.box:hover {
+    transform: translateY(-5px);
+    /* Lift the box when hovered */
+    background-color: #2c3e50;
+    /* Darken the box on hover */
+}
+
+/* Specific styles for the image */
+.about img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+@media (max-width: 767px) {
+    .about h2 {
+        font-size: 1.8rem;
+        /* Smaller font size on mobile */
+    }
+
+    .about p {
+        font-size: 1rem;
+        /* Smaller font size on mobile */
+    }
+
+    .about img {
+        width: 200px;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .box h3 {
+
+        font-size: 15px;
+
+    }
+
+    .box p {
+        font-size: 12px;
+    }
+
+
+
+}
+
+
+
+
+
+/* Menu Section */
+.menu-items {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    background: #fff1d6;
+    border: 2px solid #f3c869;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    background: #ffe1aa;
+    ;
+    /* slightly darker cream */
+}
+
+.contact {
+    text-align: center;
+    background-color: #787878;
+    /* Set the background color to white or your desired color */
+    padding: 40px 20px;
+    /* Add padding to space out the content */
+    color: #333;
+    /* Text color */
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+
+
+
+/* ===================== Footer Styles ===================== */
+.my-footer {
+    background-color: rgba(255, 208, 121, 0.85);
+    /* muted red-orange */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+
+    min-height: 100px;
+    /* Ensure minimum height */
+
+}
+
+.my-footer p {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0;
+    /* remove default bottom gap */
+}
+
+
+
+.my-footer .social i {
+    font-size: 3rem;
+    /* Increase size */
+    color: #fff5e2;
+    /* Make sure they are visible */
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin: 0 1.5rem;
+}
+
+.my-footer .social i:hover {
+    transform: scale(1.2);
+    /* Slightly enlarge on hover */
+    color: white;
+    /* Change color on hover */
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+
+    /* Adjust icon size for mobile */
+    .my-footer .social i {
+        font-size: 2rem;
+        /* Smaller icon size for mobile */
+    }
+
+    /* Adjust text size on mobile */
+    .my-footer p {
+        font-size: 0.8rem;
+        /* Smaller text size on mobile */
+    }
+}
+
+
+
+
+
+/* ===================== Login Page Styles ===================== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+    background-color: #fffaf5;
+    padding: 2rem;
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(165, 42, 42, 0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #5d4037;
+}
+
+.login-box .form-control {
+    margin-bottom: 1rem;
+}
+
+.login-box .btn-primary {
+    width: 100%;
+    padding: 0.6rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.login-box .extra-links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.login-box .extra-links a {
+    color: #ff7043;
+    text-decoration: none;
+}
+
+.login-box .extra-links a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Auth Page ===== */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    position: relative;
+    /* Ensures positioning context */
+    z-index: 0;
+    /* matches main bg */
+}
+
+.auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-form {
+    display: none;
+    flex-direction: column;
+}
+
+.auth-form.active {
+    display: flex;
+}
+
+.auth-form h2 {
+    color: #e49557;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.auth-form input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: #e49557;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #d86c4f;
+}
+
+.switch-text {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.switch-text a {
+    color: #e49557;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Falling Donuts */
+.falling-donuts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    /* Prevent interaction with donuts */
+    z-index: 0;
+    /* Lower z-index so it's behind the login box */
+    overflow: hidden;
+}
+
+.falling-donuts>div {
+    position: absolute;
+    background-image: url('assets/img/donut.png');
+    /* Ensure we have the donut image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 1;
+        top: -10%;
+        left: calc(100% * random());
+    }
+
+    100% {
+        opacity: 0;
+        top: 100%;
+    }
+}
+
+
+
+
+/* Set the size of the map container */
+
+
+#map {
+    height: 480px;
+    width: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #eaeaea;
+}
+
+
+
+#map-section {
+    padding: 50px 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.container {
+    text-align: center;
+}
+
+/* Title Styling */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #e49557;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #3b2a15;
+    margin-bottom: 30px;
+}
+
+/* ===================== Dropdown Styling ===================== */
+.select-container {
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff9e3;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #e49557;
+}
+
+
+@media (max-width: 767px) {
+    #map-section {
+        padding: 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    select {
+        max-width: 100%;
+    }
+
+    #map {
+        height: 240px;
+        width: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Style the favorite food button */
+.favorite-food-item {
+    display: flex;
+    /* Align buttons horizontally */
+    justify-content: space-between;
+    /* Space between food button and delete button */
+    align-items: center;
+    /* Center the items vertically */
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+/* Style for the food button */
+.favorite-food-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    background-color: rgb(255, 219, 151);
+    border: 1px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    /* Ensure the food button takes up 80% of the width */
+}
+
+/* Hover effect for food button */
+.favorite-food-btn:hover {
+    background-color: #ffaa54;
+    transform: translateY(-5px);
+    /* Slightly lift the item on hover */
+}
+
+/* Style the image inside the food button */
+.food-btn-content {
+    display: flex;
+    align-items: center;
+
+}
+
+.food-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+/* Food name styling */
+.food-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Style for the delete button */
+.delete-btn {
+    color: #ffffff;
+    background-color: #cfcfcf;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the text and logo */
+    border: 2px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 10%;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    /* Default font size for "DELETE" text */
+    font-weight: 600;
+    text-transform: uppercase;
+    /* Make text uppercase */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+/* Hover effect for delete button */
+.delete-btn:hover {
+    background-color: #ff3700;
+    transform: translateY(-5px);
+    /* Slightly lift the item on hover */
+}
+
+/* Remove focus outline for delete button */
+.delete-btn:focus {
+    outline: none;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+
+    .favorite-food-btn {
+        padding: 2px;
+        /* Reduce padding */
+        width: 70%;
+        /* Make the button a bit smaller on mobile */
+    }
+
+    /* Reduce font size for food name */
+    .food-name {
+        font-size: 16px;
+        /* Make the font size smaller on mobile */
+    }
+
+    /* Adjust the food image size for mobile */
+    .food-image {
+        width: 55px;
+        /* Make the image smaller on mobile */
+        height: 55px;
+        object-fit: cover;
+        margin-right: 10px;
+        /* Adjust spacing for smaller button */
+    }
+
+    #cart-container {
+        height: auto;
+        /* Adjust height to auto for mobile screens */
+        padding: 15px;
+        /* Reduce padding on smaller screens */
+    }
+
+
+    /* Hide text and replace with logo on mobile */
+    .delete-btn {
+        font-size: 0;
+        /* Remove text size */
+        background-image: url('assets/img/bin.png');
+        background-size: contain;
+        /* Ensure the logo fits inside the button */
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        /* Hide the text for mobile */
+        height: 60px;
+        /* Adjust button height for the logo */
+        width: 60px;
+        /* Adjust button width for the logo */
+    }
+}
+
+/* ===================== Favorite Food Section ===================== */
+#cart-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100vh;
+    /* Ensure the container takes the full height of the viewport */
+    max-height: 100%;
+    /* Allow it to scale if the content is less than the viewport */
+    overflow-y: auto;
+    /* Adds vertical scrolling if content exceeds max height */
+}
+
+.mainmenu-container {
+    text-align: center;
+    /* Center the content */
+    margin-bottom: 20px;
+    /* Reduce margin at the bottom */
+}
+
+.mainmenu-container h1 {
+    font-size: 2.5rem;
+    /* Adjust font size for heading */
+    font-weight: 600;
+    /* Bold font weight */
+    color: #e49557;
+    /* Muted red-orange */
+    margin-bottom: 10px;
+    /* Reduced margin */
+}
+
+.mainmenu-container p {
+    font-size: 1.2rem;
+    /* Slightly smaller font size */
+    color: #3b2a15;
+    /* Deep brownish color */
+    margin-bottom: 0px;
+    /* Reduced margin at the bottom */
+}
+
+#cart-section {
+    margin-top: -100px;
+    /* Space between sections */
+}
+
+
+
+.add-to-favorites {
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
+    padding: 0;
+    /* Remove padding */
+    cursor: pointer;
+    /* Make it clickable */
+    font-size: 30px;
+    /* Size of the heart icon */
+    color: gray;
+    /* Default heart color */
+    outline: none;
+    /* Remove focus outline */
+    box-shadow: none;
+    /* Remove any shadow */
+}
+
+
+/* ===================== Main Menu Styles ===================== */
+.main-menu-page {
+    height: 80vh;
+    /* Ensure the main takes full screen height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensure footer stays at the bottom */
+}
+
+.mainmenu-container {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+.mainmenu-container h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #e49557;
+    margin-bottom: 20px;
+}
+
+.mainmenu-container p {
+    font-size: 1.2rem;
+    color: #3b2a15;
+    margin-bottom: 30px;
+}
+
+/* ===================== Menu Boxes Styles ===================== */
+.menu-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.menu-box {
+    background: #fff1d6;
+    border: 2px solid #f3c869;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-box:hover {
+    transform: translateY(-5px);
+    background-color: #ffe1aa;
+}
+
+.menu-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3b2a15;
+}
+
+.menu-box p {
+    font-size: 1rem;
+    color: #5c4b3f;
+}
+
+.menu-box a {
+    text-decoration: none;
+    /* Remove the underline */
+}
+
+/* ===================== Mobile Styles ===================== */
+@media (max-width: 767px) {
+    .mainmenu-container h1 {
+        font-size: 2rem;
+        /* Smaller font size for mobile */
+        margin-bottom: 15px;
+        /* Adjusted margin for mobile */
+    }
+
+    .mainmenu-container p {
+        font-size: 1rem;
+        /* Smaller font size for mobile */
+        margin-bottom: 20px;
+        /* Adjusted margin for mobile */
+    }
+
+    .menu-box {
+        width: 200px;
+        /* Smaller width for mobile */
+        padding: 20px;
+        /* Smaller padding for mobile */
+    }
+
+    .menu-box h3 {
+        font-size: 1.2rem;
+        /* Smaller font size for headings */
+    }
+
+    .menu-box p {
+        font-size: 0.9rem;
+        /* Smaller text size for descriptions */
+    }
+
+    .menu-boxes {
+        gap: 1rem;
+        /* Reduced gap between boxes */
+        margin-top: 20px;
+        /* Reduced top margin */
+    }
+}

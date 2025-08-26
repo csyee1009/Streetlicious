@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Food</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/img/logo/streetliciouslogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Leaflet CSS for map styling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body style="padding-bottom:0px;">
+
+    <!-- Navigation Bar -->
+        <header>
+        <nav class="navbar navbar-expand-md fixed-top my-navbar">
+            <div class="logo">
+                <a class="navbar-brand">
+                    <img src="assets/img/logo/streetliciouslogo.png" alt="Streetlicious Logo">
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link" href="mainmenu.html">Main Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html">Navigation Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filter.html">Food Filter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review.html">Food Review</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review.html">Ingredient Menu</a></li>
+                    <li class="nav-item"><a class="nav-link logout-btn" href="index.html" id="logout-btn">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+
+        <!-- Main Menu Content -->
+        <section class="mainmenu-container">
+
+            <h1>Your Favorite Foods</h1>
+            <p>View / Delete favourites.</p>
+
+
+
+        </section>
+
+        <section id="cart-section">
+            <div id="cart-container">
+                <ul id="favorites-list"></ul>
+            </div>
+
+            <script src="cart.js"></script>
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+    <!-- Footer -->
+    <footer  class="footer small text-center text-white-50">
+        <nav class="my-footer" style="margin-top:0px;">
+            <div class="social d-flex justify-content-center align-items-center">
+                <a class="mx-0" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-pinterest"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-github"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <p>&copy; Streetlicious 2025 | All Rights Reserved</p>
+            </div>
+
+        </nav>
+
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="sessionscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

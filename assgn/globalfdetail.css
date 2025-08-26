@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+main {
+        padding: 2rem 5%;
+        padding-top:150px;
+
+    }
+
+    .my-footer{
+        margin-top:0px;
+    }
+
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fde4c2;
+        padding:0;
+    }
+
+
+    /* Detailed View */
+    .details-container {
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        scroll-margin-top: 140px;
+    }
+
+    .details-container h1 {
+        color: #ff6b35;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #f7c59f;
+        padding-bottom: 0.5rem;
+    }
+
+    .details-container img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+
+    .details-container figcaption {
+        font-size: 0.8rem;
+        color: #777;
+        margin-bottom: 1rem;
+    }
+
+    .details-container h2 {
+        color: #1a1a1a;
+        margin: 1.5rem 0 0.5rem;
+        text-align: left;
+    }
+
+    .details-container ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .details-container li {
+        margin-bottom: 0.25rem;
+    }
+
+.quick-nav {
+    background-color: rgba(255, 255, 255,0.7);
+    padding: 1rem; /* Reduced padding */
+    position: fixed;
+    top: 60px; /* Keeps it positioned just below the header */
+    left: 0;
+    right: 0;
+    z-index: 900;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 0;
+}
+
+.quick-nav-container {
+    display: flex;
+    gap: 0.5rem; /* Reduced gap between items */
+    width: max-content;
+    margin: 0 auto;
+}
+
+.quick-nav-item {
+    display: inline-block;
+    padding: 0.25rem 0.5rem; /* Reduced padding for smaller buttons */
+    background-color: rgba(239,239,208,0.7);
+    border-radius: 25px; /* Slightly smaller border-radius */
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 400; /* Lighter font weight */
+    font-size: 0.8rem; /* Smaller font size */
+    transition: all 0.3s ease;
+}
+
+.quick-nav-item:hover {
+    background-color: #ff6b35;
+    color: white;
+}
+
+    .container-after-floats::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        flex: 1 1 250px;
+    }
+
+    .maplink {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #d94e1f;
+        font-weight: 500;
+    }
+
+    .maplink::before {
+        content: "📍";
+        font-size: 1rem;
+    }
+
+    .maplink-container {
+        text-align: right;
+        margin-top: 0.5rem;
+    }
+
+    .maplink:hover {
+        color: #d94e1f;
+        text-decoration: underline;
+    }
+
+    .food-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding-right: 10px;
+    }
+
+    .favorite-heart {
+        color: #ccc;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .favorite-heart:hover {
+        color: #ff6b35;
+    }
+
+    .favorite-heart.active {
+        color: #e91e63;
+    }
+
+    

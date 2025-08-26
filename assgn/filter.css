@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+body{
+    padding-bottom:0;
+}
+
+main {
+    min-height: 65vh;
+}
+
+.continent-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    padding-left: 15px;
+    border-left: 5px solid #f5c15a;
+    color: #333;
+}
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+figure {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+figure img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.food-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 15px;
+    color: #222;
+}
+
+.image-attribution {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: #777;
+    margin: 10px 15px;
+    line-height: 1.4;
+    padding: 8px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    max-height: 60px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+figure:hover.image-attribution {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.food-description {
+    font-size: 0.95rem;
+    margin: 0 15px;
+    color: #555;
+    font-style: italic;
+}
+
+.food-overview {
+    font-size: 0.9rem;
+    margin: 10px 15px;
+    color: #666;
+    line-height: 1.5;
+    max-height: 60px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+figure:hover .food-overview {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.read-more {
+    display: block;
+    margin: 10px 15px 20px;
+    padding: 10px 0;
+    color: #edb035;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    /*border: 2px solid #f5c15a;*/
+    border-radius: 25px;
+}
+
+figure:hover .read-more {
+    opacity: 0.5;
+    transform: translateY(0);
+}
+
+.read-more:hover {
+    background-color: #f5ab18;
+    color: white;
+}
+
+.continent-label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #fdbe3f;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.filter-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-title {
+    padding-top:10px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom:10px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active {
+    background-color: #ff6b35;
+    color: white;
+    border-color: #ff6b35;
+}
+
+.food-category {
+    display: none;
+}
+
+.food-category.active {
+    display: block;
+}
+
+.quick-nav-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    .filter-btn {
+        font-size: 0.8rem;  /* Smaller font size */
+        padding: 6px 12px;  /* Smaller padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .continent-title {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+    .filter-btn {
+        font-size: 0.5rem;  /* Smaller font size */
+        padding: 4px 9px;  /* Smaller padding */
+    }
+}

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Food Selection Filter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="filter.css">
+    <link rel="icon" href="assets/img/logo/streetliciouslogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+        <header>
+        <nav class="navbar navbar-expand-md fixed-top my-navbar">
+            <div class="logo">
+                <a class="navbar-brand">
+                    <img src="assets/img/logo/streetliciouslogo.png" alt="Streetlicious Logo">
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link" href="mainmenu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html">Navigation Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filter.html">Food Filter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review.html">Food Review</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ingredient.html">Ingredient Menu</a></li>
+                    <li class="nav-item"><a class="nav-link logout-btn" href="index.html" id="logout-btn">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="filter-title">Filter Foods</h1>
+    <div class="filter-options">
+        <button class="filter-btn" data-filter="all">All Foods</button>
+        <button class="filter-btn" data-filter="global">Global</button>
+        <button class="filter-btn" data-filter="local">Local</button>
+        <p>|</p>
+        <button class="filter-btn" data-filter="meal">Meals</button>
+        <button class="filter-btn" data-filter="snack">Snacks</button>
+        <button class="filter-btn" data-filter="dessert">Desserts</button>
+        <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+    </div>
+
+
+    <main>
+        <div class="gallery">
+
+            <section class="details-container food-category active" id="Apam_Johol" data-category="dessert local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Apam_Johol" class="food-link">
+                        <img src="assets/img/localfood/Apam_Johol.jpg" alt="Apam Johol">
+                    </a>
+                    <span class="continent-label">Negeri Sembilan</span>
+                    <div class="image-attribution">
+                        “Apam Johol” by <a href="https://commons.wikimedia.org/w/index.php?title=User:DEKDA_SAMSUDIN&action=edit&redlink=1">DEKDA SAMSUDIN</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 International</a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:APAM_JOHOL.jpg">View Image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Apam Johol</p>
+                    <div class="food-description">Negeri Sembilan street snack</div>
+                    <div class="food-overview">
+                        A traditional cake from Johol, Negeri Sembilan, also called “Apam Daun Rambai” 
+                        because it is wrapped in rambai leaves, giving it a fragrant aroma. Its main 
+                        ingredients are flour, yeast, coconut milk, and brown sugar.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Apam_Johol">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Arepa" data-category="snack global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Arepa" class="maplink">
+                        <img src="assets/img/globalfood/Arepa.jpg" alt="Arepa">
+                    </a>
+                    <span class="continent-label">Columbia/Venezuela</span>
+                    <div class="image-attribution">
+                        "Arepa" by <a href="https://commons.wikimedia.org/w/index.php?title=User:Wilrachel&action=edit&redlink=1">Wilmeris Hernández</a>, licensed under
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 Unported</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Arepa_Tradicional.jpg">View Image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Arepa</p>
+                    <div class="food-description">Columbian street snack</div>
+                    <div class="food-overview">
+                        A popular Venezuelan and Colombian street food made from ground cornmeal dough shaped into
+                        round patties and grilled, baked, or fried. Often sliced open and stuffed with cheese,
+                        meats,
+                        beans, or eggs, it’s a versatile and affordable snack enjoyed throughout both countries.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Arepa">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Belgian_Waffle" data-category="dessert global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Belgian_Waffle" class="maplink">
+                        <img src="assets/img/globalfood/Belgian_Waffle.jpg" alt="Belgian_Waffle">
+                    </a>
+                    <span class="continent-label">Belgium</span>
+                    <div class="image-attribution">
+                        "Belgian Waffle" by <a href="https://www.flickr.com/people/92269745@N00">Ralph Daily</a>, licensed under
+                        <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 Generic</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Waffle_with_strawberries_and_confectioner%27s_sugar.jpg">Image page</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Belgian Waffle</p>
+                    <div class="food-description">Belgian street dessert</div>
+                    <div class="food-overview">
+                        A popular street food in Belgium, known for its light, crispy texture and deep pockets.
+                        Often served warm, it can be enjoyed plain or topped with whipped cream, chocolate, fruits,
+                        or sugar. It is a sweet treat commonly found at street stalls and markets.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Belgian_Waffle">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Coxinha" data-category="snack global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Coxinha" class="maplink">
+                        <img src="assets/img/globalfood/Coxinha.jpg" alt="Coxinha">
+                    </a>
+                    <span class="continent-label">Brazil</span>
+                    <div class="image-attribution">
+                        “Coxinha” by <a href="https://www.flickr.com/people/36102864@N05">Romerito Pontes</a>, licensed under
+                        <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 Generic</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:(2014-11-22)_La_Donosti_-_Agudos_-_Coxinha_de_Leitoa_Romerito_Pontes_(15870107515).jpg">View Image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Coxinha</p>
+                    <div class="food-description">Brazilian street snack</div>
+                    <div class="food-overview">
+                        A popular Brazilian street snack shaped like a teardrop, made of shredded chicken filling
+                        wrapped in dough, then breaded and deep-fried until crispy. It’s a savory, satisfying treat
+                        commonly found at food stalls and bakeries across Brazil.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Coxinha">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Dodol" data-category="dessert local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Dodol" class="food-link">
+                        <img src="assets/img/localfood/Dodol.jpg" alt="Dodol">
+                    </a>
+                    <span class="continent-label">Kedah</span>
+                    <div class="image-attribution">
+                        “Dodol” by <a href="https://commons.wikimedia.org/wiki/User:Midori">Midori</a>, licensed under 
+                        <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0 Unported </a>. 
+                        <a href="https://commons.wikimedia.org/wiki/File:Jenang_asli_Kudus.JPG">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Dodol</p>
+                    <div class="food-description">Kedah street dessert</div>
+                    <div class="food-overview">
+                        Traditional sweet popular across Southeast Asia, especially in Malaysia. It made from 
+                        coconut milk, rice flour, and palm sugar to achieve chewy, sticky, toffee-like. 
+                        Required slowly cooked over low heat for several hours, with constant stirring to 
+                        ensure it reaches a thick, sticky consistency.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Dodol">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Falafel" data-category="vegetarian global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Falafel" class="maplink">
+                        <img src="assets/img/globalfood/Falafel.jpg" alt="Falafel">
+                    </a>
+                    <span class="continent-label">Egypt</span>
+                    <div class="image-attribution">
+                        “Falafel” by <a href="https://commons.wikimedia.org/wiki/User:Popo_le_Chien">Popo le Chien</a>, licensed under
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 Unported</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Falafels_2.jpg">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Falafel</p>
+                    <div class="food-description">Egyptian deep-fried balls</div>
+                    <div class="food-overview">
+                        A popular Egyptian street food made from deep-fried balls or patties of ground fava beans
+                        or chickpeas mixed with herbs and spices. Often served in pita bread with salad and tahini
+                        sauce, it’s a tasty and affordable snack enjoyed across Egypt.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Falafel">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Fish_and_Chips" data-category="meal global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Fish_and_Chips" class="maplink">
+                        <img src="assets/img/globalfood/Fish_and_Chips.jpg" alt="Fish_and_Chips">
+                    </a>
+                    <span class="continent-label">United Kingdom</span>
+                    <div class="image-attribution">
+                        "Fish and Chips" by <a href="https://en.wikipedia.org/wiki/User:Solipsist">Andrew Dunn</a>,
+                        licensed under
+                        <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">CC BY-SA 2.0 Generic</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Fish_and_chips.jpg">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Fish and Chips</p>
+                    <div class="food-description">British classic dish</div>
+                    <div class="food-overview">
+                        A classic British street food featuring battered and deep-fried white fish,
+                        usually cod or haddock, served with thick-cut fried potatoes. Often enjoyed with salt,
+                        vinegar, and mushy peas, it's a traditional takeaway meal found across the UK.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Fish_and_Chips">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Gyros" data-category="meal global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Gyros" class="maplink">
+                        <img src="assets/img/globalfood/Gyros.JPG" alt="Gyros">
+                    </a>
+                    <span class="continent-label">Greece</span>
+                    <div class="image-attribution">
+                        "Gyros" by <a href="https://commons.wikimedia.org/wiki/User:Fajardoalacant">Antonio Fajardo i
+                            López</a>, licensed under
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 Unported</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Pita_giros.JPG">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Gyros</p>
+                    <div class="food-description">Greek wrap</div>
+                    <div class="food-overview">
+                        A famous Greek street food made of meat (usually pork, chicken, or lamb)
+                        cooked on a vertical rotisserie, sliced thin, and served in pita bread with tomatoes,
+                        onions, and tzatziki sauce. It's a quick, flavorful wrap popular throughout Greece.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Gyros">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Hainanese_Chicken_Rice" data-category="meal local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Hainanese_Chicken_Rice" class="food-link">
+                        <img src="assets/img/localfood/Hainanese_Chicken_Rice.jpg" alt="Hainanese_Chicken_Rice">
+                    </a>
+                    <span class="continent-label">Perak</span>
+                    <div class="image-attribution">
+                        “Hainanese Chicken Rice” by <a href="https://commons.wikimedia.org/wiki/User_talk:I64s">Terence</a>, 
+                        licensed under 
+                        <a href="https://creativecommons.org/licenses/by/2.5/deed.en">CC BY 2.5 Generic</a>. 
+                        <a href="https://commons.wikimedia.org/wiki/File:Hainanese_Chicken_Rice.jpg">View Image</a>. 
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Hainanese Chicken Rice</p>
+                    <div class="food-description">Perak street chicken rice</div>
+                    <div class="food-overview">
+                        A well-known and must-try dish in Perak, also referred to as Wenchang chicken, which 
+                        originates from traditional Hainanese cuisine. It typically consists of fragrant white 
+                        rice, kampung chicken gently poached in broth, celery, and a side of chilli sauce 
+                        to enhance both flavour and presentation.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Hainanese_Chicken_Rice">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Hinava" data-category="snack local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Hinava" class="food-link">
+                        <img src="assets/img/localfood/Hinava.jpg" alt="Hinava">
+                    </a>
+                    <span class="continent-label">Sabah</span>
+                    <div class="image-attribution">
+                        “Hinava” by <a href="https://commons.wikimedia.org/w/index.php?title=User:Terencetulus&action=edit&redlink=1">Terencetulus</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 International </a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Hinava_Sabah.jpg">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Hinava</p>
+                    <div class="food-description">Sabah street snack</div>
+                    <div class="food-overview">
+                        A Kadazan-Dusun delicacy from Sabah made with raw fish marinated in lime juice, then 
+                        mixed with other ingredients. Often described as a type of fish salad, it has a 
+                        sashimi-like texture and a pale, milky colour, and is typically served during festive 
+                        occasions.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Hinava">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Hokkien Mee" data-category="meal local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Hokkien_Mee" class="food-link">
+                        <img src="assets/img/localfood/Hokkien_Mee.jpg" alt="Hokkien Mee">
+                    </a>
+                    <span class="continent-label">Penang</span>
+                    <div class="image-attribution">
+                         “Hokkien Mee Penang” by <a href="https://www.flickr.com/people/19160878@N08">brown_colour</a>, 
+                         licensed under 
+                        <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 Generic</a>. 
+                        <a href="https://commons.wikimedia.org/wiki/File:Penang_Har_Mee_Sold_in_Parit_Buntar.jpg">
+                        View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Hokkien Mee</p>
+                    <div class="food-description">Penang street food</div>
+                    <div class="food-overview">
+                        A famous Malaysian noodle soup known for its aromatic prawn-based broth, usually served 
+                        with egg noodles, bean sprouts, prawns, and sometimes pork slices or fried shallots.
+                    </div>
+                    <a class="read-more" href="localfdetail.html">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Hot_Dog" data-category="meal global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Hot_Dog" class="maplink">
+                        <img src="assets/img/globalfood/Hot_Dog.jpg" alt="Hot_Dog">
+                    </a>
+                    <span class="continent-label">U.S.</span>
+                    <div class="image-attribution">
+                        "Hot Dog" by <a href="https://flickr.com/photos/stevendepolo/">stevendepolo</a>, licensed under
+                        <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 Generic</a>.
+                        <a
+                            href="https://commons.wikimedia.org/wiki/File:Chili_Dog_Crazy_Charlie%27s_Hotdogs_Food_Macros_May_07,_20111.jpg">
+                            Image page</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Hot Dog</p>
+                    <div class="food-description">American street food</div>
+                    <div class="food-overview">
+                        A popular street food, especially in the U.S., consisting of a grilled or steamed sausage served
+                        inside a soft bun. They're often topped with mustard, ketchup, onions, relish, or sauerkraut,
+                        making for a quick and tasty snack on the go.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Hot_Dog">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Ikan_Bakar" data-category="meal local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Ikan_Bakar" class="food-link">
+                        <img src="assets/img/localfood/Ikan_Bakar.jpg" alt="Ikan_Bakar">
+                    </a>
+                    <span class="continent-label">Perlis</span>
+                    <div class="image-attribution">
+                        “Ikan Bakar” by <a href="https://commons.wikimedia.org/wiki/User:S_Kartika">S Kartika</a>, 
+                        licensed under 
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 International </a>. 
+                        <a href="https://commons.wikimedia.org/wiki/File:Ikan_Bakar_1.jpg">View image</a>. 
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Ikan Bakar</p>
+                    <div class="food-description">Perlis street food</div>
+                    <div class="food-overview">
+                        In Perlis, grilled fish is a well-known dish influenced by Malay, Chinese, and Thai cooking 
+                        traditions. It is simple to prepare, using ingredients such as red chilies, salt, pepper, 
+                        light soy sauce, oyster sauce, fish sauce, Thai chili sauce, and a unique local chili 
+                        sauce made in Perlis.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Ikan_Bakar">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Kolo_Mee" data-category="meal local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Kolo_Mee" class="food-link">
+                        <img src="assets/img/localfood/Kolo_Mee.jpg" alt="Kolo Mee">
+                    </a>
+                    <span class="continent-label">Sarawak</span>
+                    <div class="image-attribution">
+                        “Kolo Mee” by <a href="https://commons.wikimedia.org/wiki/User:Meandkancil2020">Meandkancil2020</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0 International</a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Kolo_Mee_khas_Sarawak,_Malaysia.jpg">View Image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Kolo Mee</p>
+                    <div class="food-description">Sarawak style noodle</div>
+                    <div class="food-overview">
+                        Also known as “Koh Loh Mee,” this well-loved Sarawak noodle dish uses springy egg noodles 
+                        as its base. It is usually topped with minced pork, slices of char siu, and crispy fried 
+                        onions. The name “Kolo” comes from the Cantonese term gon lo, meaning “dry mixed,” which 
+                        reflects the dish’s signature dry, tossed style.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Kolo_Mee">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Kompia" data-category="snack local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Kompia" class="food-link">
+                        <img src="assets/img/localfood/Kompia.jpg" alt="Kompia">
+                    </a>
+                    <span class="continent-label">Sarawak</span>
+                    <div class="image-attribution">
+                        “Kompia” by <a href="https://commons.wikimedia.org/w/index.php?title=User:AasonTing&action=edit&redlink=1">AasonTing</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 International </a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Sibu_Kompia.jpg">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Kompia</p>
+                    <div class="food-description">Sarawak street snack</div>
+                    <div class="food-overview">
+                        A traditional Sarawak bread, sometimes called “Foochow bagels,” popular among the local 
+                        community. It is flat and chewy, typically baked in a charcoal-fired clay oven, and 
+                        resembles a bagel in shape. Fillings vary, including options such as lard with scallions, 
+                        peanuts, BBQ pork, or coconut.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Kompia">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Kuih_Penjaram" data-category="snack local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Kuih_Penjaram" class="food-link">
+                        <img src="assets/img/localfood/Kuih_Penjaram.jpg" alt="Kuih Penjaram">
+                    </a>
+                    <span class="continent-label">Sabah</span>
+                    <div class="image-attribution">
+                        “Kuih Penjaram” by <a href="https://commons.wikimedia.org/wiki/User:Muffin_Wizard">Ranking Update</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 Unported </a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Kuih_pinjaram_(Penyaram).jpg">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Kuih Penjaram</p>
+                    <div class="food-description">Sabah street snack</div>
+                    <div class="food-overview">
+                        A traditional Bruneian Malay cake from Sabah, also nicknamed “cake UFO” for its 
+                        distinctive shape. Soft on the inside with a crispy edge, it is made from a mixture of 
+                        flour, corn flour, coconut milk, and sugar, and is often enjoyed during festivals or 
+                        as an evening snack.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Kuih_Penjaram">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Lamington" data-category="dessert global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Lamington" class="maplink">
+                        <img src="assets/img/globalfood/Lamington.jpg" alt="Lamington">
+                    </a>
+                    <span class="continent-label">Australia</span>
+                    <div class="image-attribution">
+                        “Lamington" by <a href="https://www.flickr.com/photos/stone-soup/33930070370/">jules</a>,
+                        licensed under
+                        <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 Generic</a>
+                        <a href="https://commons.wikimedia.org/wiki/File:Lamingtons.jpg">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Lamington</p>
+                    <div class="food-description">Australian street dessert</div>
+                    <div class="food-overview">
+                        A popular Australian treat made from light sponge cake squares dipped in chocolate icing
+                        and rolled in desiccated coconut. Sometimes filled with cream or jam, it’s a sweet and
+                        affordable snack enjoyed at bakeries, markets, and community events across Australia.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Lamington">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Martabak" data-category="meal global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Martabak" class="maplink">
+                        <img src="assets/img/globalfood/Martabak.jpg" alt="Martabak">
+                    </a>
+                    <span class="continent-label">Indonesia</span>
+                    <div class="image-attribution">
+                        "Martabak" by <a href="https://commons.wikimedia.org/wiki/User:Mojackjutaily">Mojackjutaily</a>,
+                        licensed under
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 International</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Murtabak.jpg">View Image</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Martabak</p>
+                    <div class="food-description">Indonesian street food</div>
+                    <div class="food-overview">
+                        A popular Indonesian street food with two main types: savory martabak telur, filled with
+                        eggs, meat, and spices, and sweet martabak manis, a thick pancake stuffed with chocolate,
+                        cheese, or condensed milk. It's a favorite evening snack sold at street stalls across Indonesia.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Martabak">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Meat_Pie" data-category="meal global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Meat_Pie" class="maplink">
+                        <img src="assets/img/globalfood/Meat_Pie.jpg" alt="Meat_Pie">
+                    </a>
+                    <span class="continent-label">Australia</span>
+                    <div class="image-attribution">
+                        “Meat Pie” by <a href="http://georgianrecipes.net/author/georgianrecipes/">Georgian Recipes</a>,
+                        licensed under
+                        <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0 Unported</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Fydzhin_cut.jpg">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Meat Pie</p>
+                    <div class="food-description">Australian meat pie</div>
+                    <div class="food-overview">
+                        A popular street food in many countries, especially in Australia and the UK. It consists of
+                        flaky pastry filled with savory minced meat, gravy, and sometimes vegetables. Served hot,
+                        it makes a hearty and convenient snack or meal on the go.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Meat_Pie">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Mee_Bandung_Muar" data-category="meal local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Mee_Bandung_Muar" class="food-link">
+                        <img src="assets/img/localfood/Mee_Bandung_Muar.jpg" alt="Mee Bandung Muar">
+                    </a>
+                    <span class="continent-label">Johor</span>
+                    <div class="image-attribution">
+                        “Mee Bandung Muar” by Sham Hardy</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">CC BY-SA 2.0 Generic</a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Mee_Bandung_Muar.jpg">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Mee Bandung Muar</p>
+                    <div class="food-description">Johor street noodle</div>
+                    <div class="food-overview">
+                        A famous noodle dish from Muar, Johor, featuring a thick broth made from shrimp, spices, 
+                        and other seasonings. It is commonly served with eggs, meat, and vegetables, offering 
+                        a unique balance of savoury, sweet, and slightly tangy flavours.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Mee_Bandung_Muar">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Nasi_Ambeng" data-category="meal local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Nasi_Ambeng" class="food-link">
+                        <img src="assets/img/localfood/Nasi_Ambeng.jpg" alt="Nasi Ambeng">
+                    </a>
+                    <span class="continent-label">Selangor</span>
+                    <div class="image-attribution">
+                        “Nasi Ambeng” by <a href="https://commons.wikimedia.org/wiki/User:Misaochan2">Misaochan2</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0 International</a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Nasi_ambeng_3.jpg">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Nasi Ambeng</p>
+                    <div class="food-description">Selangor street snack</div>
+                    <div class="food-overview">
+                        A traditional Javanese-Malay dish popular in Selangor, known for its generous serving 
+                        style. It features a mound of rice surrounded by side dishes such as rendang, sambal, 
+                        fried chicken, and serunding, served on a large platter meant for sharing among 
+                        several people.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Nasi_Ambeng">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Nasi_Kebuli" data-category="meal local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Nasi_Kebuli" class="food-link">
+                        <img src="assets/img/localfood/Nasi_Kebuli.jpg" alt="Nasi Kebuli">
+                    </a>
+                    <span class="continent-label">Pahang</span>
+                    <div class="image-attribution">
+                        “Nasi Kebuli” by <a href="https://commons.wikimedia.org/wiki/User:Gunkarta">Gunawan Kartapranata</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 Unported </a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Nasi_Kebuli_Jakarta.JPG">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Nasi Kebuli</p>
+                    <div class="food-description">Pahang street rice</div>
+                    <div class="food-overview">
+                        A rice dish cooked with coconut milk, salt, and occasionally sugar and oil, usually 
+                        prepared using a rice cooker or by steaming. Spices such as cumin, ginger, and 
+                        garlic, along with other variations, give the dish its distinctive aroma and taste.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Nasi_Kebuli">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Nasi_Kerabu" data-category="meal local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Nasi_Kerabu" class="food-link">
+                        <img src="assets/img/localfood/Nasi_Kerabu.jpg" alt="Nasi kerabu">
+                    </a>
+                    <span class="continent-label">Kelantan</span>
+                    <div class="image-attribution">
+                        “Nasi Kerabu” by <a href="https://commons.wikimedia.org/w/index.php?title=User:Brownc&action=edit&redlink=1">Brownc</a>, 
+                        licensed under 
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 International </a>. 
+                        <a href="https://commons.wikimedia.org/wiki/File:Nasi_kerabu_from_serai,_paradigm_mall.jpg">View image</a>. 
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Nasi Kerabu</p>
+                    <div class="food-description">Kelantan street rice</div>
+                    <div class="food-overview">
+                        A signature traditional dish in the Malay community and an iconic part of East Coast 
+                        Malaysia’s culinary heritage. It features blue-tinted rice, a mix of fresh herbs for 
+                        aroma, and various side dishes, creating an appealing and flavourful meal that 
+                        represents the region’s identity.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Nasi_Kerabu">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Pad_Thai" data-category="meal global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Pad_Thai" class="maplink">
+                        <img src="assets/img/globalfood/Pad_Thai.jpg" alt="Pad_Thai">
+                    </a>
+                    <span class="continent-label">Thailand</span>
+                    <div class="image-attribution">
+                        "Pad Thai" by <a href="https://commons.wikimedia.org/wiki/User:Takeaway">Takeaway</a>,
+                        licensed under
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 Unported</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Phat_Thai_kung_Chang_Khien_street_stall.jpg">
+                            Image page</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Pad Thai</p>
+                    <div class="food-description">Thai stir-fried noodle dish</div>
+                    <div class="food-overview">
+                        A famous Thai street food dish made with stir-fried rice noodles, eggs, tofu or shrimp,
+                        bean sprouts, and peanuts, all tossed in a tangy-sweet tamarind sauce. It's a flavorful,
+                        quick meal commonly found at street stalls throughout Thailand.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Pad_Thai">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Pizza" data-category="meal global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Pizza" class="maplink">
+                        <img src="assets/img/globalfood/Pizza.jpg" alt="Pizza">
+                    </a>
+                    <span class="continent-label">Italy</span>
+                    <div class="image-attribution">
+                        "Pizza" by <a href="https://www.flickr.com/people/91873384@N04">Dale Cruse</a>, licensed under
+                        <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 Generic</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Pizza_(33154465968).jpg">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Pizza</p>
+                    <div class="food-description">Italian street food</div>
+                    <div class="food-overview">
+                        One of Italy's most iconic street foods, especially in cities like Naples where it originated.
+                        Made with a thin, crispy crust and topped with fresh ingredients like tomato sauce, mozzarella,
+                        and basil, it's often sold by the slice and enjoyed as a quick, flavorful meal on the go.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Pizza">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Popiah" data-category="snack local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Popiah" class="food-link">
+                        <img src="assets/img/localfood/Popiah.jpg" alt="Popiah">
+                    </a>
+                    <span class="continent-label">Melaka</span>
+                    <div class="image-attribution">
+                        “Popiah Basah” by <a href="https://commons.wikimedia.org/w/index.php?title=User:ProjectManhattan&action=edit&redlink=1">ProjectManhattan</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0 Unported </a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Popiah_2.jpg">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Popiah</p>
+                    <div class="food-description">Melaka spring roll</div>
+                    <div class="food-overview">
+                        A soft, fresh spring roll made with a thin, crepe-like wrapper. The filling typically 
+                        includes cooked vegetables, tofu, egg, bean sprouts, and sometimes meat, topped with 
+                        sauces. The combination can vary, but it is most often enjoyed as a snack.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Popiah">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Pulut_Panggang" data-category="snack local">
+                <figure data-category="local">
+                    <a href="localfdetail.html#Pulut_Panggang" class="food-link">
+                        <img src="assets/img/localfood/Pulut_Panggang.jpg" alt="Pulut Panggang">
+                    </a>
+                    <span class="continent-label">Terengganu</span>
+                    <div class="image-attribution">
+                        “Pulut Panggang” by <a href="https://commons.wikimedia.org/w/index.php?title=User:Mdsheth1986&action=edit&redlink=1">Mdsheth1986</a>, licensed under 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 International</a>. 
+                            <a href="https://commons.wikimedia.org/wiki/File:Pulut_Panggang.jpg">View image</a>. Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Pulut Panggang</p>
+                    <div class="food-description">Terengganu street snack</div>
+                    <div class="food-overview">
+                        A popular Terengganu street snack, also known in English as Grilled Glutinous Rice 
+                        Packets or Rolls. It is loved for its combination of sweet, savoury, and sometimes 
+                        mildly spicy flavours, depending on the filling. The glutinous rice is wrapped in 
+                        banana leaves before being served.
+                    </div>
+                    <a class="read-more" href="localfdetail.html#Pulut_Panggang">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Suya" data-category="snack global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Suya" class="maplink">
+                        <img src="assets/img/globalfood/Suya.JPG" alt="Suya">
+                    </a>
+                    <span class="continent-label">Nigeria</span>
+                    <div class="image-attribution">
+                        "Suya" by <a href="https://commons.wikimedia.org/wiki/User:WhisperToMe">WhisperToMe</a>,
+                        licensed under
+                        <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:SuyavarietiesTX.JPG">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Suya</p>
+                    <div class="food-description">Nigerian street food</div>
+                    <div class="food-overview">
+                        A popular Nigerian street food made from thinly sliced beef or chicken coated in a spicy
+                        peanut-based seasoning called yaji. Grilled over open flames and served with onions, tomatoes,
+                        and fresh vegetables, it’s a flavorful and affordable snack enjoyed across West Africa.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Suya">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Taco" data-category="snack global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Taco" class="maplink">
+                        <img src="assets/img/globalfood/Taco.jpg" alt="Taco">
+                    </a>
+                    <span class="continent-label">Mexico</span>
+                    <div class="image-attribution">
+                        "Taco" by <a href="https://www.flickr.com/photos/picsoflife/">Ari Helminen</a>, licensed under
+                        <a href="https://creativecommons.org/licenses/by/2.0/deed.en">CC BY 2.0 Generic </a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Tacos_al_Pastor_2.jpg">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Taco</p>
+                    <div class="food-description">Mexican street food</div>
+                    <div class="food-overview">
+                        A classic Mexican street food featuring small, soft corn or flour tortillas filled with a
+                        variety of ingredients like grilled meats, seafood, beans, and fresh toppings such as onions,
+                        cilantro, and salsa. It's a quick, flavorful, and versatile meal enjoyed throughout Mexico.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Taco">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Takoyaki" data-category="snack global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Takoyaki" class="maplink">
+                        <img src="assets/img/globalfood/Takoyaki.jpg" alt="Takoyaki">
+                    </a>
+                    <span class="continent-label">Japan</span>
+                    <div class="image-attribution">
+                        "Takoyaki" by <a href="https://commons.wikimedia.org/wiki/User:TaronjaSatsuma">Francesc
+                            Fort</a>,
+                        licensed under
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0 International</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Takoyaki_-_Tora.jpg">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Takoyaki</p>
+                    <div class="food-description">Japanese octopus balls</div>
+                    <div class="food-overview">
+                        A popular Japanese street food from Osaka, made of wheat flour batter filled with
+                        octopus, green onion, and tempura bits. Cooked in round molds, it's topped with savory sauce,
+                        mayo, seaweed, and bonito flakes. It's a festival favorite across Japan.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Takoyaki">Read more</a>
+                </figure>
+            </section>
+
+            <section class="details-container food-category active" id="Tteokbokki" data-category="snack global">
+                <figure data-category="global">
+                    <a href="globalfdetail.html#Tteokbokki" class="maplink">
+                        <img src="assets/img/globalfood/Tteokbokki.jpg" alt="Tteokbokki">
+                    </a>
+                    <span class="continent-label">Korea</span>
+                    <div class="image-attribution">
+                        "Tteokbokki" by <a href="https://commons.wikimedia.org/wiki/User:Popo_le_Chien">Popo le
+                            Chien</a>,
+                        licensed under
+                        <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Tteokbokki.JPG">Image page</a>.
+                        Changes made: Resized and Cropped
+                    </div>
+                    <p class="food-name">Tteokbokki</p>
+                    <div class="food-description">Korean spicy rice cakes</div>
+                    <div class="food-overview">
+                        A popular Korean street food made of chewy rice cakes cooked in a spicy-sweet gochujang
+                        (red chili paste) sauce. Often served with fish cakes, boiled eggs, and green onions,
+                        it's a beloved comfort food found at markets and street stalls across Korea.
+                    </div>
+                    <a class="read-more" href="globalfdetail.html#Tteokbokki">Read more</a>
+                </figure>
+            </section>
+        </div>
+    </main>
+
+        <!-- Footer -->
+    <footer class="footer small text-center text-white-50">
+        <nav class="my-footer">
+            <div class="social d-flex justify-content-center align-items-center">
+                <a class="mx-0" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-pinterest"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-github"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <p>&copy; Streetlicious 2025 | All Rights Reserved</p>
+            </div>
+        </nav>
+    </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const foodSections = document.querySelectorAll('.details-container');
+
+        let activeLocations = [];  // global/local
+        let activeCategory = null; // meal/snack/dessert/vegetarian
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                if (filter === "all") {
+                    // Reset all filters
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeLocations = [];
+                    activeCategory = null;
+                }
+                else if (filter === "global" || filter === "local") {
+                    // Toggle location filters (can select multiple)
+                    btn.classList.toggle('active');
+                    if (btn.classList.contains('active')) {
+                        activeLocations.push(filter);
+                    } else {
+                        activeLocations = activeLocations.filter(f => f !== filter);
+                    }
+                    // Remove "all" if active
+                    filterButtons.forEach(b => {
+                        if (b.getAttribute('data-filter') === "all") {
+                            b.classList.remove('active');
+                        }
+                    });
+                }
+                else {
+                    // Category filter (only one at a time)
+                    filterButtons.forEach(b => {
+                        if (["meal", "snack", "dessert", "vegetarian"].includes(b.getAttribute('data-filter'))) {
+                            b.classList.remove('active');
+                        }
+                    });
+                    btn.classList.add('active');
+                    activeCategory = filter;
+                    // Remove "all" if active
+                    filterButtons.forEach(b => {
+                        if (b.getAttribute('data-filter') === "all") {
+                            b.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Apply filters to sections instead of figures
+                foodSections.forEach(section => {
+                    const categories = section.getAttribute('data-category').split(" ");
+
+                    let matchLocation = activeLocations.length === 0 || activeLocations.some(f => categories.includes(f));
+                    let matchCategory = !activeCategory || categories.includes(activeCategory);
+
+                    if (matchLocation && matchCategory) {
+                        section.style.display = "";   // reset → grid arranges properly
+                    } else {
+                        section.style.display = "none"; // hide section
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="sessionscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/img/logo/streetliciouslogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Leaflet CSS for map styling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+           <header>
+        <nav class="navbar navbar-expand-md fixed-top my-navbar">
+            <div class="logo">
+                <a class="navbar-brand">
+                    <img src="assets/img/logo/streetliciouslogo.png" alt="Streetlicious Logo">
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link" href="mainmenu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html">Navigation Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filter.html">Food Filter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review.html">Food Review</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ingredient.html">Ingredient Menu</a></li>
+                    <li class="nav-item"><a class="nav-link logout-btn" href="index.html" id="logout-btn">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main style="padding:40px; padding-bottom:80px">
+        <!-- Map Section -->
+        <section id="map-section">
+            <h2>Explore with the Map</h2>
+            <p>Select a region to view the map:</p>
+            <select id="map-toggle" onchange="toggleMap()">
+                <option>N/A</option>
+                <option value="global">Global View</option>
+                <option value="malaysia">Local View (Malaysia)</option>
+            </select>
+
+            <p style="margin-top:10px">Select a specific region:</p>
+            <select id="region-toggle" onchange="updateMap()">
+                <!-- Default option, will be populated dynamically -->
+            </select>
+
+
+
+            <!-- Map Container -->
+            <div id="map"></div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer small text-center text-white-50">
+        <nav class="fixed-bottom my-footer">
+            <div class="social d-flex justify-content-center align-items-center">
+                <a class="mx-0" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-pinterest"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-github"></i></a>
+                <a class="mx-0" href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <p>&copy; Streetlicious 2025 | All Rights Reserved</p>
+            </div>
+
+        </nav>
+
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="sessionscript.js"></script>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Map JavaScript -->
+    <script>
+        let map;
+        let continentLayer;   // continents (Global View)
+        let malaysiaLayer;    // 14 "state" markers (Malaysia View)
+
+        // --- Default views ---
+        const globalMap = [0, 0];
+        const malaysiaMap = [4.2105, 101.9758];
+        const malaysiaPeninsular = [4.2105, 102.0];
+        const malaysiaSabahSarawak = [4.5, 115.0];
+
+        // --- Continents (for Global View) ---
+        const continentCenters = {
+            "Asia": [34.0479, 100.6197],
+            "Africa": [1.6500, 10.2670],
+            "Europe": [54.5260, 15.2551],
+            "North America": [37.0902, -95.7129],
+            "South America": [-8.7832, -55.4915],
+            "Australia": [-25.2744, 133.7751]
+        };
+
+        // --- “14 states” (13 states + KL commonly counted as the 14th unit) ---
+        // Coordinates are approximate centers / capitals for easy placement.
+        const malaysiaStates = {
+            "Sabah & Sarawak": [5.9780, 116.0750],
+            "Kuala Lumpur": [3.1390, 101.6869]
+        };
+
+        // Map each to a page (edit filenames to match your routes)
+        const malaysiaStatePages = {
+            "Sabah & Sarawak": "localfood.html#Sabah_Sarawak",
+            "Kuala Lumpur": "localfood.html#Peninsular_Malaysia"
+        };
+
+        // ===== Init map =====
+        function initMap() {
+            map = L.map('map').setView(globalMap, 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            continentLayer = L.layerGroup().addTo(map);
+            malaysiaLayer = L.layerGroup(); // add when switching to Malaysia
+
+            addContinentMarkers(); // show continents on first load
+        }
+
+        // ===== Add continent markers (Global View) =====
+        function addContinentMarkers() {
+            if (!map || !continentLayer) return;
+            continentLayer.clearLayers();
+
+            for (const name in continentCenters) {
+                const coords = continentCenters[name];
+                const m = L.marker(coords).addTo(continentLayer);
+                // Redirect to a continent page on click (edit filenames if needed)
+                const page = `globalfood.html#${name.replace(/\s+/g, '_')}`;
+                m.on('click', () => {
+                    const confirmView = confirm(`You had clicked the "${name}" button, view ${name} food?`);
+                    if (confirmView) {
+                        window.location.href = page;
+                    }
+                });
+            }
+        }
+
+        // ===== Add Malaysia “state” markers (Malaysia View) =====
+        function addMalaysiaStateMarkers() {
+            if (!map || !malaysiaLayer) return;
+            malaysiaLayer.clearLayers();
+
+            for (const state in malaysiaStates) {
+                const coords = malaysiaStates[state];
+                const page = malaysiaStatePages[state] || '#';
+                const m = L.marker(coords).addTo(malaysiaLayer);
+                m.on('click', () => {
+                    const confirmView = confirm(`You had clicked the "${state}" button, view ${state} food?`);
+                    if (confirmView) {
+                        window.location.href = page;
+                    }
+                });
+            }
+
+            // ensure layer visible when in Malaysia view
+            if (!map.hasLayer(malaysiaLayer)) malaysiaLayer.addTo(map);
+        }
+
+        // ===== Toggle between Global and Malaysia =====
+        function toggleMap() {
+            const selectedValue = document.getElementById("map-toggle").value;
+            const regionSelect = document.getElementById("region-toggle");
+            regionSelect.innerHTML = "";
+
+            if (selectedValue === "global") {
+                // dropdown
+                ["N/A", "Asia", "Africa", "Europe", "North America", "South America", "Australia"]
+                    .forEach(txt => {
+                        const o = document.createElement("option");
+                        o.value = txt; o.text = txt; regionSelect.appendChild(o);
+                    });
+
+                map.setView(globalMap, 2);
+
+                // show continents, hide Malaysia
+                addContinentMarkers();
+                malaysiaLayer.clearLayers();
+                if (map.hasLayer(malaysiaLayer)) map.removeLayer(malaysiaLayer);
+                if (!map.hasLayer(continentLayer)) continentLayer.addTo(map);
+
+            } else if (selectedValue === "malaysia") {
+                // dropdown
+                ["N/A", "Peninsular", "Sabah & Sarawak"]
+                    .forEach(txt => {
+                        const o = document.createElement("option");
+                        o.value = txt; o.text = txt; regionSelect.appendChild(o);
+                    });
+
+                map.setView(malaysiaMap, 6);
+
+                // show Malaysia states, hide continents
+                continentLayer.clearLayers();
+                if (map.hasLayer(continentLayer)) map.removeLayer(continentLayer);
+                addMalaysiaStateMarkers();
+            }
+        }
+
+        // ===== Region dropdown moves camera (kept as-is) =====
+        function updateMap() {
+            const selectedRegion = document.getElementById("region-toggle").value;
+
+            if (selectedRegion === "Asia") {
+                map.setView([34.0479, 100.6197], (window.innerWidth <= 767) ? 2 : 3);
+            } else if (selectedRegion === "Africa") {
+                map.setView([1.6500, 10.2670], (window.innerWidth <= 767) ? 2 : 3);
+            } else if (selectedRegion === "Europe") {
+                map.setView([54.5260, 15.2551], (window.innerWidth <= 767) ? 2 : 3);
+            } else if (selectedRegion === "North America") {
+                map.setView([37.0902, -95.7129], (window.innerWidth <= 767) ? 2 : 3);
+            } else if (selectedRegion === "South America") {
+                map.setView([-8.7832, -55.4915], (window.innerWidth <= 767) ? 2 : 3);
+            } else if (selectedRegion === "Australia") {
+                map.setView([-25.2744, 133.7751], (window.innerWidth <= 767) ? 3 : 4);
+            } else if (selectedRegion === "Peninsular") {
+                map.setView(malaysiaPeninsular, (window.innerWidth <= 767) ? 6 : 7);
+            } else if (selectedRegion === "Sabah & Sarawak") {
+                map.setView(malaysiaSabahSarawak, (window.innerWidth <= 767) ? 6 : 7);
+            }
+        }
+
+        // expose for inline handlers
+        window.initMap = initMap;
+        window.toggleMap = toggleMap;
+        window.updateMap = updateMap;
+
+        // init on load
+        window.onload = initMap;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

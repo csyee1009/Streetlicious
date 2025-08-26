@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streetlicious</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles(1).css">
+  <link rel="icon" href="assets/img/logo/streetliciouslogo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    section {
+      padding: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top my-navbar">
+      <div class="logo">
+        <a class="navbar-brand">
+          <img src="assets/img/logo/streetliciouslogo.png" alt="Streetlicious Logo">
+        </a>
+      </div>
+
+      <!-- Navbar Toggler (Hamburger icon) for Mobile View -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto nav-links">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#unlock-features">Member Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video-section">User Guideline</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link login-btn" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero">
+
+      <!-- Background video -->
+      <video autoplay muted loop playsinline class="hero-video">
+        <source id="hero-video-source" src="assets/mp4/streetfood.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-content">
+        <h1 style="margin:0;">Welcome to Streetlicious</h1>
+        <p>We ride the streets, you taste the treats!</p>
+        <a href="login.html" class="cta-btn">Login</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>We are UTAR Computer Science students developing this website for our Front-End Web Development assignment.
+        Streetlicious showcases local and global cuisines in a simple and interactive way.</p>
+
+
+      <!-- UTAR Mission & Vision inside About -->
+      <div class="utar-section">
+
+        <div class="mv-container">
+          <!-- Mission Box -->
+          <div class="mv-box">
+            <h3>Our Mission</h3>
+            <p>
+              To provide holistic education to nurture all-round individuals with a caring and ethical mindset,
+              and to advance knowledge and learning through teaching and research.
+            </p>
+            <img src="assets/img/utar.png" alt="UTAR Logo" class="utar-logo">
+          </div>
+
+          <!-- Vision Box -->
+          <div class="mv-box">
+            <h3>Our Vision</h3>
+            <p>
+              To be a global university of educational excellence, with transformative societal impact.
+            </p>
+            <img src="assets/img/utar.png" alt="UTAR Logo" class="utar-logo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="unlock-features" style="scroll-margin-top: 65px;padding: 40px 0; background: #1c1c1c;">
+      <div style="text-align:center; margin-bottom: 30px;">
+        <h1 style="color: #ff914d; font-size: 28px; margin-bottom: 10px;">🔒 Unlock More Features 🔒</h1>
+        <p style="color: #a6a6a6;">Sign up or log in to access premium features</p>
+      </div>
+
+      <div class="features-container">
+        <!-- Map Feature -->
+        <div class="feature-card" onclick="redirectLogin()">
+          <div class="icon">📍</div>
+          <h3>Map</h3>
+          <p>Find street food vendors nearby</p>
+        </div>
+
+        <!-- Favorites Feature -->
+        <div class="feature-card" onclick="redirectLogin()">
+          <div class="icon">⭐</div>
+          <h3>Favorites</h3>
+          <p>Save your favorite food spots</p>
+        </div>
+
+        <!-- Reviews Feature -->
+        <div class="feature-card" onclick="redirectLogin()">
+          <div class="icon">💬</div>
+          <h3>Reviews</h3>
+          <p>Share your food experience</p>
+        </div>
+
+        <!-- Menu Feature -->
+        <div class="feature-card" onclick="redirectLogin()">
+          <div class="icon">📖</div>
+          <h3>Menu</h3>
+          <p>Browse popular street food menus</p>
+        </div>
+
+
+      </div>
+    </section>
+
+    <script>
+      // Redirect function (change URL to your login page)
+      function redirectLogin() {
+        window.location.href = "login.html";
+      }
+
+    </script>
+
+    <!-- YouTube Video Embed -->
+    <section class="video-section" id="video-section">
+      <h2>Watch Our User Guidelines</h2>
+      <div class="video-container">
+        <iframe width="700" height="330" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Email: contact@streetlicious.com | Phone: +60 12-345 6789</p>
+    </section>
+
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer small text-center text-white-50">
+    <nav class="my-footer">
+      <div class="social d-flex justify-content-center align-items-center">
+        <a class="mx-0" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-pinterest"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-github"></i></a>
+        <a class="mx-0" href="#"><i class="fab fa-telegram"></i></a>
+      </div>
+      <div class="container px-4 px-lg-5">
+        <p>&copy; Streetlicious 2025 | All Rights Reserved</p>
+      </div>
+
+    </nav>
+
+  </footer>
+
+  <script>
+    // JavaScript to change video source for mobile
+    window.addEventListener('resize', function () {
+      const videoSource = document.getElementById('hero-video-source');
+
+      if (window.innerWidth <= 767) {
+        // Mobile view - change video source
+        videoSource.src = 'assets/mp4/streetfood2.mp4';  // Mobile video
+      } else {
+        // Desktop view - reset to original video
+        videoSource.src = 'assets/mp4/streetfood.mp4';  // Original video
+      }
+
+      // Reload the video to apply the new source
+      document.querySelector('video').load();
+    });
+
+    // Trigger the resize event when the page loads to set the correct video source
+    window.dispatchEvent(new Event('resize'));
+  </script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+</body>
+
+</html>
